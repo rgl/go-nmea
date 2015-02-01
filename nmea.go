@@ -84,7 +84,7 @@ func isValidSentence(sentence string) bool {
 // |  5 | Position Fix  | 1          |        | 0=Fix not available           |
 // |    |               |            |        | 1=GPS fix                     |
 // |    |               |            |        | 2=Differential GPS fix        |
-// |  6 | Satellites    | 8          |        | Range 0 to 14                 |
+// |  6 | Satellites    | 8          |        | Range 0 to 12                 |
 // |    | Used          |            |        |                               |
 // |  7 | HDOP          | 0.95       |        | Horizontal Dilution of        |
 // |    |               |            |        | Precision                     |
