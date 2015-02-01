@@ -99,8 +99,8 @@ var validSentences = []validSentence{
 			Time:           duration("6h49m51s"),
 			UsedSatellites: 8,
 			PositionFix:    1,
-			Latitude:       2.11876,
-			Longitude:      12.274063333333334,
+			Latitude:       23.11876,
+			Longitude:      120.274063333333334,
 			HDOP:           0.95,
 			Altitude:       39.9}},
 
@@ -111,8 +111,8 @@ var validSentences = []validSentence{
 			Time:           duration("6h49m51s"),
 			UsedSatellites: 8,
 			PositionFix:    1,
-			Latitude:       -2.11876,
-			Longitude:      -12.274063333333334,
+			Latitude:       -23.11876,
+			Longitude:      -120.274063333333334,
 			HDOP:           0.95,
 			Altitude:       39.9}},
 
@@ -137,8 +137,8 @@ var validSentences = []validSentence{
 		&GPRMC{
 			Time:      time.Date(2006, 4, 26, 6, 49, 51, 0, time.UTC),
 			Status:    'A',
-			Latitude:  2.11876,
-			Longitude: 12.274063333333334,
+			Latitude:  23.11876,
+			Longitude: 120.274063333333334,
 			Mode:      'A',
 			Speed:     0.03,
 			Heading:   165.48}},
@@ -149,8 +149,8 @@ var validSentences = []validSentence{
 		&GPRMC{
 			Time:      time.Date(2006, 4, 26, 6, 49, 51, 0, time.UTC),
 			Status:    'A',
-			Latitude:  -2.11876,
-			Longitude: -12.274063333333334,
+			Latitude:  -23.11876,
+			Longitude: -120.274063333333334,
 			Mode:      'A',
 			Speed:     0.03,
 			Heading:   165.48}},

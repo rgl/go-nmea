@@ -410,7 +410,7 @@ func parseGPGSA(sentence string) (*GPGSA, error) {
 	return result, nil
 }
 
-// latitude. e.g.: 2307.1256 format: ddmm.mmmm
+// latitude. format: ddmm.mmmm e.g.: input: 2307.1256 output: 23.11876
 // indicator. e.g.: N
 func parseLatitude(text string, indicator string) (float64, error) {
 	if len(text) != 9 || text[4] != '.' {
@@ -421,7 +421,7 @@ func parseLatitude(text string, indicator string) (float64, error) {
 		return 0, fmt.Errorf("Failed to parse latitude indicator %s", indicator)
 	}
 
-	degrees, err := strconv.ParseFloat(text[0:1], 64)
+	degrees, err := strconv.ParseFloat(text[0:2], 64)
 	if err != nil {
 		return 0, fmt.Errorf("Failed to parse latitude degrees %s: %v", text, err)
 	}
@@ -440,7 +440,7 @@ func parseLatitude(text string, indicator string) (float64, error) {
 	return latitude, nil
 }
 
-// longitude. e.g.: 12016.4438 format: dddmm.mmmm
+// longitude. format: dddmm.mmmm e.g.: input: 12016.4438 output: 120.274063333333334
 // indicator. e.g.: E
 func parseLongitude(text string, indicator string) (float64, error) {
 	if len(text) != 10 || text[5] != '.' {
@@ -451,7 +451,7 @@ func parseLongitude(text string, indicator string) (float64, error) {
 		return 0, fmt.Errorf("Failed to parse longitude indicator %s", indicator)
 	}
 
-	degrees, err := strconv.ParseFloat(text[0:2], 64)
+	degrees, err := strconv.ParseFloat(text[0:3], 64)
 	if err != nil {
 		return 0, fmt.Errorf("Failed to parse longitude degrees %s: %v", text, err)
 	}
